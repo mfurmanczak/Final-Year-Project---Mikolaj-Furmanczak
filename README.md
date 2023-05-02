@@ -23,10 +23,10 @@ The project includes the following scripts:
 - `main.py`: This script trains the model.
 - `results_analysis.py`: This script shows the results of the training.
 
-And a `history` folder where the history of 3 proposed models is included.
+And the `history` folder where the history of 3 proposed models is included.
 
 
-## To see various visualizations of the audio data
+## To see the description and various visualizations of the dataset
 ```
 python data_visualization.py
 ```
@@ -44,7 +44,7 @@ Train the model
 python main.py
 ```
 
-## To analyse results
+## To view the results
 ```
 python results_analysis.py
 ```
