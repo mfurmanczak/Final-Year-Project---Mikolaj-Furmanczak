@@ -122,16 +122,13 @@ def train(k_fold, data, epochs, batch_size):
 
 
 ###### HYPER PARAMETERS ######
-batch_size = 64
+batch_size = 32
 epochs = 100
 kernel_filter_pixel = 3
-droprate = 0.4
+droprate = 0.5
 kernel_regularizer = 0.01
 early_stop_patience = 15
 
-# first was batch 32 kernel 3 droprate 0.4
-# second was batch 32 kernel 4 droprate 0.6
-# third: batch 32 kernel 3 droprate 0.5
 
 k_fold = 1
 repeat = 1
@@ -155,7 +152,6 @@ def for_every_fold(data, kfold):
 def main():
     us8k_df = pd.read_pickle("us8k_df.pkl")
 
-    # history1 = []
     for i in range(1, 11):
         for_every_fold(us8k_df, i)
  

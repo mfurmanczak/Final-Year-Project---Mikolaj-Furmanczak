@@ -22,9 +22,6 @@ def show_results(kfold, history_pd):
     print('\tAverage accuracy on the validation set: %.4f %%' % average)   
     print(kfold)
     
-    
-
-    # plot accuracy
     plt.figure(figsize=(10, 5))
     plt.subplot(1, 2, 1)
     plt.plot(history_pd['accuracy'], label='Training accuracy')
@@ -46,7 +43,6 @@ def show_results(kfold, history_pd):
 
 
 def main():
-    # load history_1 from csv file in /history and show results
     histories = glob('history/Model 1/*.csv')
     averages = []
     all_averages = []
@@ -55,8 +51,7 @@ def main():
         average_max_fold, kfold = show_results(i+1, history_df)
         
         averages.append(average_max_fold)
-    # print max accuracy from averages
-    # round to 2 decimal places
+
     total_average = np.mean(averages)
     max_average = np.max(averages)
     print(averages)

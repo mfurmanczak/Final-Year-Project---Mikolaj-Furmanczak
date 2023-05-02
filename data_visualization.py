@@ -48,8 +48,6 @@ def compute_audio_statistics(dataset_df):
 
 def class_count(dataset_df):
     values = dataset_df.groupby('class').slice_file_name.count()
-    # format the output tp look nice
-    # print in the format "Class: " class_name        |       count
     print(f"Class:{'':<20}{'Count: '}")
     for i, (index, value) in enumerate(values.items()):
         print(f"{index:<25} | {value:>6}")
@@ -74,8 +72,6 @@ def plot_waveform(dataset_df):
 
     for i, filepath in enumerate(audio_samples):
         data, sr = librosa.load(filepath)
-        # librosa.display.waveshow(data, sr=sr)
-        # create plot of the waveform and display it
         plt.figure(figsize=(10, 4))
         plt.plot(data)
         plt.xlabel("Time")
@@ -89,7 +85,6 @@ def plot_mel_spectrogram(dataset_df):
     audio_samples, labels = random_samples['filepath'].tolist(
     ), random_samples['class'].tolist()
 
-    # n_fft = 2048
     HOP_LENGTH = 512
     WINDOW_LENGTH = 512
     N_MEL = 128
@@ -134,11 +129,11 @@ def plot_mel_spectrogram_db(dataset_df):
 def main():
     dataset_df = create_dataset_df('UrbanSound8K/metadata/UrbanSound8K.csv')
     compute_audio_statistics(dataset_df)
-    # class_count(dataset_df)
-    # audio_statistics(dataset_df)
-    # plot_waveform(dataset_df)
-    # plot_mel_spectrogram(dataset_df)
-    # plot_mel_spectrogram_db(dataset_df)
+    class_count(dataset_df)
+    audio_statistics(dataset_df)
+    plot_waveform(dataset_df)
+    plot_mel_spectrogram(dataset_df)
+    plot_mel_spectrogram_db(dataset_df)
 
 
 if __name__ == '__main__':
