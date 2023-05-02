@@ -1,7 +1,8 @@
-# Final Year Project - Mikolaj Furmanczak
+# Artificial Neural Networks for Multi-Class Classification of Audio Data in Urban Environments
+Software for training a CNN Model on the `UrbanSound8K` dataset using `Tensorflow`.
 
-This is my final year project, focused on training a CNN on the UrbanSound8K dataset using Tensorflow. 
-
+## Final Year Project - Mikolaj Furmanczak
+This is the software described and evaluated in the final report. 
 
 ## Installation
 
