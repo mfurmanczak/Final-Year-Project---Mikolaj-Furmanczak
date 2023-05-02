@@ -1,4 +1,4 @@
-# Artificial Neural Networks for Multi-Class Classification of Audio Data in Urban Environments.
+# Artificial Neural Networks for Multi-Class Classification of Audio Data in Urban Environments
 Software for training a CNN Model on the `UrbanSound8K` dataset using `Tensorflow`. 
 
 ## Installation
