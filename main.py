@@ -122,6 +122,8 @@ def train(k_fold, data, epochs, batch_size):
 
 
 ###### HYPER PARAMETERS ######
+model_num = 4
+
 batch_size = 32
 epochs = 100
 kernel_filter_pixel = 3
@@ -146,7 +148,7 @@ def for_every_fold(data, kfold):
 
     for i, history in enumerate(histories):
         history_df = pd.DataFrame(history.history)
-        history_df.to_csv('history/history_{}.csv'.format(kfold), index=False)
+        history_df.to_csv('history/Model ' + str(model_num) + '/history_{}.csv'.format(kfold), index=False)
 
 
 def main():
