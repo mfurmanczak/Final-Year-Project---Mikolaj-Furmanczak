@@ -45,4 +45,4 @@ python main.py
 
 ## License
 
-This project is licensed under the [MIT LICENSE.md](LICENSE).
+This project is licensed under the [MIT LICENSE](LICENSE).
