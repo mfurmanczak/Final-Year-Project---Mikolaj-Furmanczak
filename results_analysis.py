@@ -43,7 +43,7 @@ def show_results(kfold, history_pd):
 
 
 def main():
-    histories = glob('history/Model 1/*.csv')
+    histories = glob('history/*.csv')
     averages = []
     all_averages = []
     for i, history in enumerate(histories):

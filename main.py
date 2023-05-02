@@ -146,7 +146,7 @@ def for_every_fold(data, kfold):
 
     for i, history in enumerate(histories):
         history_df = pd.DataFrame(history.history)
-        history_df.to_csv('history/Model 1/history_{}.csv'.format(kfold), index=False)
+        history_df.to_csv('history/history_{}.csv'.format(kfold), index=False)
 
 
 def main():
