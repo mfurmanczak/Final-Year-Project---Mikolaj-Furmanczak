@@ -1,6 +1,6 @@
 # Final Year Project - Mikolaj Furmanczak
 
-This is my final year project, focused on training a CNN network on the UrbanSound8K dataset using Tensorflow. 
+This is my final year project, focused on training a CNN on the UrbanSound8K dataset using Tensorflow. 
 
 
 ## Installation
